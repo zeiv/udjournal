@@ -31,7 +31,7 @@ privileges do
 		includes :edit, :update, :destroy
 	end
 	privilege :curate do
-		includes :publish, :update, :edit
+		includes :publish, :feature, :update, :edit
 	end
 	privilege :submit do
 		includes :create, :new
