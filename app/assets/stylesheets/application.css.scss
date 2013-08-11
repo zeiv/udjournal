@@ -1,0 +1,142 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+
+@import 'colors';
+
+// --------------------------------
+// Header and Navbar
+// --------------------------------
+
+body {
+	background-color: #fefdfc;
+}
+
+div.flash-messages {
+	margin-top: 1em;
+	background-color: $ud_gray;
+}
+
+div.flash-messages p {
+	padding: 5px 20px 5px 20px;
+	margin: 0;
+}
+
+body > header:first-of-type{
+	text-align: center;
+	position: relative;
+	top: -2em;
+}
+
+body > header:first-of-type h1 {
+	font-size: 96px;
+	margin-bottom: 0;
+}
+
+body > header:first-of-type h3 {
+	font-size: 17px;
+	margin-top: 0;
+}
+
+body > nav:first-of-type {
+	background-color: $ud_blue;
+}
+
+body > nav:first-of-type ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+body > nav:first-of-type li {
+	margin: 0;
+	display: block;
+	position: relative;
+	float: left;
+	border-right: 1px solid $ud_gray;
+}
+
+body > nav:first-of-type li a {
+	display: block;
+	padding: 0.8em 1em 0.8em 1em;
+	font-size: 0.85em;
+	color: white;
+	text-decoration: none;
+	letter-spacing: 0px;
+	word-spacing: 3px;
+}
+
+body > nav:first-of-type li a:hover {
+	background-color: $ud_blue_dark;
+}
+
+body > nav:first-of-type li:last-child {
+	border: none;
+	float: right;
+	width: 100px;
+}
+
+body > nav:first-of-type li:last-child input {
+	margin: 8px;
+	box-sizing: border-box;
+	float: right;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 106px;
+	padding: 3px 3px 3px 3px;
+	position: relative;
+	display: block;
+	border: none;
+	background-color: $ud_gray;
+}
+
+// --------------------------------
+// Buttons & Inputs
+// --------------------------------
+
+.btn {
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+}
+
+input, textarea, input[type='checkbox'] {
+	border: 1px solid lightgray;
+	background-color: $ud_gray;
+	padding: 0.5em 1em 0.6em 1em;
+}
+
+div.actions {
+	margin-top: 10px;
+}
+
+input[type='submit'], .btn {
+	display: inline-block;
+	background-color: $ud_cyan;
+	border: none;
+	padding: 0.5em 1em 0.6em 1em;
+	color: white;
+	cursor: pointer;
+}
+
+input[type='submit']:hover, .btn:hover {
+	background-color: $ud_cyan_dark;
+}
+
+input[type='submit'].btn-red, .btn.btn-red {
+	background-color: $ud_red;
+}
+
+input[type='submit'].btn-red:hover {
+	background-color: $ud_red_dark;
+}

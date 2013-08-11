@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Udjournal</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => false %>
+  <%= csrf_meta_tags %>
+</head>
+<body class='container_12'>
+
+<header>
+	<h1>Epistolae</h1>
+	<h3>University of Dallas Undergraduate Academic Journal</h3>
+</header>
+
+<nav class='grid_12'>
+	<ul class='clearfix'>
+		<%= menu_button 'Home', root_path %>
+		<%= menu_button 'Subscriptions', '#' %>
+		<%= menu_button 'Submit Content', new_post_path %>
+		<%= menu_button 'Archives', '#' %>
+		<%= menu_button 'About Epistolae', '#' %>
+		<%= menu_button 'University of Dallas', 'http://www.udallas.edu' %>
+		<%= menu_button 'Contact Us', '#' %>
+		<%= menu_button 'Sign In', sign_in_path unless signed_in? %>
+		<%= menu_button 'Sign Out', sign_out_path if signed_in? %>
+		<%= content_tag :li, content_tag(:input) %>
+	</ul>
+</nav>
+
+<%= render 'layouts/messages' unless flash.empty? %>
+
+<%= yield %>
+
+</body>
+</html>

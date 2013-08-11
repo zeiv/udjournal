@@ -1,0 +1,175 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'colors';
+
+section#department_list header h1 {
+	color: $gray_dark;
+	text-align: center;
+	border-top: 1px solid $gray;
+	border-bottom: 1px solid $gray;
+}
+
+section#department_list a.grid_4 {
+	text-decoration: none;
+	margin-bottom: 20px;
+}
+
+section#department_list a.grid_4:nth-child(3n + 2) {
+	margin-left: 0;
+}
+
+section#department_list a.grid_4:nth-child(3n + 4) {
+	margin-right: 0;
+}
+
+section#department_list a.grid_4 h2 {
+	height: 34px;
+	margin: 43px 0 43px 0;
+	vertical-align: middle;
+	text-align: center;
+	color: white;
+}
+
+section#department_list {
+	a#art {
+		background: $gray_light;
+	}
+	a#art:hover {
+		background: $art_button_hover;
+	}
+
+	a#bus {
+		background: $gray_light;
+	}
+	a#bus:hover {
+		background: $bus_button_hover;
+	}
+
+	a#bio {
+		background: $gray_light;
+	}
+	a#bio:hover {
+		background: $bio_button_hover;
+	}
+
+	a#chem {
+		background: $gray_light;
+	}
+	a#chem:hover {
+		background: $chem_button_hover;
+	}
+
+	a#cs {
+		background: $gray_light;
+	}
+	a#cs:hover {
+		background: $cs_button_hover;
+	}
+
+	a#cla {
+		background: $gray_light;
+	}
+	a#cla:hover {
+		background: $cla_button_hover;
+	}
+
+	a#dra {
+		background: $gray_light;
+	}
+	a#dra:hover {
+		background: $dra_button_hover;
+	}
+
+	a#econ {
+		background: $gray_light;
+	}
+	a#econ:hover {
+		background: $econ_button_hover;
+	}
+
+	a#edu {
+		background: $gray_light;
+	}
+	a#edu:hover {
+		background: $edu_button_hover;
+	}
+
+	a#eng {
+		background: $gray_light;
+	}
+	a#eng:hover {
+		background: $eng_button_hover;
+	}
+
+	a#hist {
+		background: $gray_light;
+	}
+	a#hist:hover {
+		background: $hist_button_hover;
+	}
+
+	a#husc {
+		background: $gray_light;
+	}
+	a#husc:hover {
+		background: $husc_button_hover;
+	}
+
+	a#math {
+		background: $gray_light;
+	}
+	a#math:hover {
+		background: $math_button_hover;
+	}
+
+	a#modl {
+		background: $gray_light;
+	}
+	a#modl:hover {
+		background: $modl_button_hover;
+	}
+
+	a#past {
+		background: $gray_light;
+	}
+	a#past:hover {
+		background: $past_button_hover;
+	}
+
+	a#phys {
+		background: $gray_light;
+	}
+	a#phys:hover {
+		background: $phys_button_hover;
+	}
+
+	a#pol {
+		background: $gray_light;
+	}
+	a#pol:hover {
+		background: $pol_button_hover;
+	}
+
+	a#psy {
+		background: $gray_light;
+	}
+	a#psy:hover {
+		background: $psy_button_hover;
+	}
+
+	a#phil {
+		background: $gray_light;
+	}
+	a#phil:hover {
+		background: $phil_button_hover;
+	}
+
+	a#theo {
+		background: $gray_light;
+	}
+	a#theo:hover {
+		background: $theo_button_hover;
+	}
+}
