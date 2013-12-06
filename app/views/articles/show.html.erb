@@ -1,0 +1,18 @@
+<article class='article grid_12'>
+  <p id="notice"><%= notice %></p>
+
+  <br>
+
+  <%= content_tag :h1, @article.title %>
+  <%= content_tag :p, "Author: "+@article.user.name %>
+
+  <%= @article.body %>
+
+  <p>
+    <strong>Department:</strong>
+    <%= @article.department.title %>
+  </p>
+
+  <%= link_to 'Edit', edit_article_path(@article) %> |
+  <%= link_to 'Back', articles_path %>
+</article>

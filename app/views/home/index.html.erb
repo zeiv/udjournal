@@ -3,13 +3,13 @@
 		<header>
 			<h1><%= link_to @featured_post.title, @featured_post if @featured_post %></h1>
 		</header>
-		<%= content_tag :p, truncate(@featured_post.body, length: 1600, separator: ' ') if @featured_post %>
+		<%= content_tag :p, raw(truncate(@featured_post.body, length: 1600, separator: ' ')) if @featured_post %>
 	</article>
 	<article id='recent' class='grid_6'>
 		<header>
 			<h1><%= link_to @recent_post.title, @recent_post if @recent_post %></h1>
 		</header>
-		<%= content_tag :p, truncate(@recent_post.body, length: 800, separator: ' ') if @recent_post %>
+		<%= content_tag :p, raw(truncate(@recent_post.body, length: 800, separator: ' ')) if @recent_post %>
 	</article>
 </section>
 

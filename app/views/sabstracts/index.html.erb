@@ -1,0 +1,33 @@
+<h1>Listing sabstracts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>User</th>
+      <th>Departmnent</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sabstracts.each do |sabstract| %>
+      <tr>
+        <td><%= sabstract.title %></td>
+        <td><%= sabstract.content %></td>
+        <td><%= sabstract.user_id %></td>
+        <td><%= sabstract.departmnent_id %></td>
+        <td><%= link_to 'Show', sabstract %></td>
+        <td><%= link_to 'Edit', edit_sabstract_path(sabstract) %></td>
+        <td><%= link_to 'Destroy', sabstract, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sabstract', new_sabstract_path %>

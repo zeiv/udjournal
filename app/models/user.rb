@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 	has_many :authentications, dependent: :delete_all
+	has_many :articles
 	has_and_belongs_to_many :roles
 	before_create :add_default_role
 

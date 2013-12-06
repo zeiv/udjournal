@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
@@ -38,10 +38,14 @@ gem 'simple_form'
 gem 'rspec-rails'
 gem 'prawn'
 gem 'paperclip'
+gem 'tinymce-rails'
+gem 'tinymce-rails-imageupload', '~> 3.5.8'
+gem 'shoulda-matchers'
+gem 'high_voltage'
 gem 'omniauth'
 gem 'omniauth-openid'
 gem 'ruby-openid-apps-discovery'
-gem "ruby-openid", :git => "git://github.com/kendagriff/ruby-openid.git", :ref => "79beaa419d4754e787757f2545331509419e222e"
+gem "ruby-openid"
 gem 'declarative_authorization'
 
 group :doc do

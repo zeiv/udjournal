@@ -1,14 +1,14 @@
 class HomeController < ApplicationController
   def index
-    @featured_post = Post.featured
-    @recent_post = Post.last
+    @featured_post = Article.featured
+    @recent_post = Article.last_published
   end
 
-  def art
-  end
+  # def art
+  # end
 
-  def business
-  end
+  # def business
+  # end
 
   def biology
   end
@@ -16,51 +16,51 @@ class HomeController < ApplicationController
   def chemistry
   end
 
-  def computer_science
-  end
+  # def computer_science
+  # end
 
-  def classics
-  end
+  # def classics
+  # end
 
-  def drama
-  end
+  # def drama
+  # end
 
   def economics
   end
 
-  def education
-  end
+  # def education
+  # end
 
-  def english
-  end
+  # def english
+  # end
 
-  def history
-  end
+  # def history
+  # end
 
-  def human_sciences
-  end
+  # def human_sciences
+  # end
 
   def mathematics
   end
 
-  def ministry
-  end
+  # def ministry
+  # end
 
-  def modern_languages
-  end
+  # def modern_languages
+  # end
 
   def physics
   end
 
-  def politics
-  end
+  # def politics
+  # end
 
   def psychology
   end
 
-  def philosophy
-  end
+  # def philosophy
+  # end
 
-  def theology
-  end
+  # def theology
+  # end
 end

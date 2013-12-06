@@ -1,0 +1,2 @@
+module SabstractsHelper
+end

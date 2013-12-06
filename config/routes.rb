@@ -1,31 +1,36 @@
 Udjournal::Application.routes.draw do
+  resources :sabstracts
+
+  resources :abstracts
+
   get 'sign_in', to: "sessions#new", as: :sign_in
   get 'sign_out', to: 'sessions#destroy', as: :sign_out
   match 'auth/:provider/callback', to: "sessions#create", via: [:get, :post]
   match 'auth/failure', to: "sessions#failure", via: [:get, :post]
 
-  resources :posts
+  resources :articles
 
-  get "art", to: 'home#art', as: :art
-  get "business", to: 'home#business', as: :bus
+  # get "art", to: 'home#art', as: :art
+  # get "business", to: 'home#business', as: :bus
   get "biology", to: 'home#biology', as: :bio
   get "chemistry", to: 'home#chemistry', as: :chem
-  get "computer_science", to: 'home#computer_science', as: :cs
-  get "classics", to: 'home#classics', as: :cla
+  # get "computer_science", to: 'home#computer_science', as: :cs
+  # get "classics", to: 'home#classics', as: :cla
   get "drama", to: 'home#drama', as: :dra
   get "economics", to: 'home#economics', as: :econ
-  get "education", to: 'home#education', as: :edu
-  get "english", to: 'home#english', as: :eng
-  get "history", to: 'home#history', as: :hist
-  get "human_sciences", to: 'home#human_sciences', as: :husc
+  # get "education", to: 'home#education', as: :edu
+  # get "english", to: 'home#english', as: :eng
+  # get "history", to: 'home#history', as: :hist
+  # get "human_sciences", to: 'home#human_sciences', as: :husc
   get "mathematics", to: 'home#mathematics', as: :math
-  get "ministry", to: 'home#ministry', as: :past
-  get "modern_languages", to: 'home#modern_languages', as: :modl
+  # get "ministry", to: 'home#ministry', as: :past
+  # get "modern_languages", to: 'home#modern_languages', as: :modl
   get "physics", to: 'home#physics', as: :phys
-  get "politics", to: 'home#politics', as: :pol
+  # get "politics", to: 'home#politics', as: :pol
   get "psychology", to: 'home#psychology', as: :psy
-  get "philosophy", to: 'home#philosophy', as: :phil
-  get "theology", to: 'home#theology', as: :theo
+  # get "philosophy", to: 'home#philosophy', as: :phil
+  # get "theology", to: 'home#theology', as: :theo
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -45,7 +50,7 @@ Udjournal::Application.routes.draw do
   #   resources :products do
   #     member do
   #       get 'short'
-  #       post 'toggle'
+  #       article 'toggle'
   #     end
   #
   #     collection do
@@ -69,9 +74,9 @@ Udjournal::Application.routes.draw do
   
   # Example resource route with concerns:
   #   concern :toggleable do
-  #     post 'toggle'
+  #     article 'toggle'
   #   end
-  #   resources :posts, concerns: :toggleable
+  #   resources :articles, concerns: :toggleable
   #   resources :photos, concerns: :toggleable
 
   # Example resource route within a namespace:

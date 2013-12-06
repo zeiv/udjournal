@@ -1,3 +1,3 @@
 class Department < ActiveRecord::Base
-	has_many :posts
+	has_many :articles
 end

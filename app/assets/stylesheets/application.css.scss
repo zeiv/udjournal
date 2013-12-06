@@ -22,6 +22,10 @@ body {
 	background-color: #fefdfc;
 }
 
+.container_12 > * {
+	max-width: 960px;
+}
+
 div.flash-messages {
 	margin-top: 1em;
 	background-color: $ud_gray;
@@ -41,15 +45,24 @@ body > header:first-of-type{
 body > header:first-of-type h1 {
 	font-size: 96px;
 	margin-bottom: 0;
+	font-family: "Times New Roman", serif;
+}
+
+body > header:first-of-type h2 {
+	font-size: 56px;
+	margin-bottom: 0;
+	font-family: "Times New Roman", serif;
 }
 
 body > header:first-of-type h3 {
 	font-size: 17px;
 	margin-top: 0;
+	font-family: "Times New Roman", serif;
 }
 
 body > nav:first-of-type {
 	background-color: $ud_blue;
+	margin: 0;
 }
 
 body > nav:first-of-type ul {
@@ -114,6 +127,11 @@ input, textarea, input[type='checkbox'] {
 	border: 1px solid lightgray;
 	background-color: $ud_gray;
 	padding: 0.5em 1em 0.6em 1em;
+}
+
+.tinymce {
+	width: 914px;
+	height: 400px;
 }
 
 div.actions {

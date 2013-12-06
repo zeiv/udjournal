@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
   		flash[:notice] = "Welcome back #{@authentication.user.name}!"
   		@user = @authentication.user
   	else
-  		user = User.new name: auth_hash['info']['name'], email: auth_hash['info']['email']
+  		user = User.find_or_initialize_by_email name: auth_hash['info']['name'], email: auth_hash['info']['email']
   		user.authentications.build provider: auth_hash['provider'], uid: auth_hash['uid']
   		user.save
   		@user = user
