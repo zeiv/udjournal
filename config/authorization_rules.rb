@@ -17,9 +17,14 @@ authorization do
 			to :manage
 			if_attribute user_id: is {user.id}
 		end
+		has_permission_on :photos, to: :submit
 	end
 	role :guest do
 		has_permission_on :articles, to: [:show, :index]
+		has_permission_on :photos, to: :view
+		has_permission_on :papers, to: :view
+		has_permission_on :posters, to: :view
+		has_permission_on :sabstracts, to: :view
 	end
 end
 

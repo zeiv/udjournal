@@ -3,6 +3,7 @@ class Article < ActiveRecord::Base
 
 	belongs_to :department
 	belongs_to :user
+	has_many :photos, as: :document
 
 	def body
 		read_attribute(:body).html_safe

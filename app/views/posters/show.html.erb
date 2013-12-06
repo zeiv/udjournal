@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @poster.user_id %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @poster.department_id %>
+</p>
+
+<p>
+  <strong>Sabstract:</strong>
+  <%= @poster.sabstract_id %>
+</p>
+
+<%= link_to 'Edit', edit_poster_path(@poster) %> |
+<%= link_to 'Back', posters_path %>

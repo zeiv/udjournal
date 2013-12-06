@@ -16,6 +16,7 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   def new
     @article = Article.new
+    @hash = rand(36**16).to_s(36)
   end
 
   # GET /articles/1/edit
@@ -71,6 +72,6 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :body, :published, :department_id, :featured)
+      params.require(:article).permit(:title, :body, :published, :department_id, :featured, :authors, :hash_key)
     end
 end

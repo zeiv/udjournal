@@ -1,0 +1,2 @@
+class PeerReviewsController < ApplicationController
+end

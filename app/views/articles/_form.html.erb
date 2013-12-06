@@ -18,13 +18,14 @@
   <div class="field">
     <%= f.label :body %><br>
     <%= f.text_area :body, class: 'tinymce', rows: 10 %>
-    <%= tinymce %>
+    <%= tinymce uploadimage_hint: { hash_key: @hash, document_id: @article.id }.to_s %>
   </div>
   <div class="field">
     <%= f.label :department_id %><br>
     <%= f.select :department_id, Department.all.collect {|dept| [dept.title, dept.id]} %>
   </div>
   <div class="actions">
+    <%= f.hidden_field :hash_key, value: @hash %>
     <%= f.submit %>
   </div>
 <% end %>

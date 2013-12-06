@@ -1,4 +1,15 @@
 Udjournal::Application.routes.draw do
+  resources :photos
+  post 'tinymce_assets', to: 'photos#create', as: :upload_photo
+
+  resources :authors
+
+  resources :peer_reviews
+
+  resources :posters
+
+  resources :papers
+
   resources :sabstracts
 
   resources :abstracts
