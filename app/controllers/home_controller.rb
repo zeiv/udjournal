@@ -50,6 +50,8 @@ class HomeController < ApplicationController
   # end
 
   def physics
+    @recent_post = Article.where(department_id: 5, published: true).last
+    @posts = Article.where(department_id: 5).reverse - [@recent_post]
   end
 
   # def politics
