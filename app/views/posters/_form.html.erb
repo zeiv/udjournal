@@ -1,4 +1,4 @@
-<%= form_for(@poster) do |f| %>
+<%= nested_form_for(@poster, html: { multipart: true }) do |f| %>
   <% if @poster.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@poster.errors.count, "error") %> prohibited this poster from being saved:</h2>
@@ -10,18 +10,62 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
+  <%= f.fields_for :sabstract do |sabstract_form| %>
+    <div class="field">
+      <%= sabstract_form.label :title %><br>
+      <%= sabstract_form.text_field :title %>
+    </div>
+    <div class="field">
+      <%= sabstract_form.label "Abstract" %><br>
+      <%= sabstract_form.text_area :content, rows: 8 %>
+    </div>
+  <% end %>
+  <p><%= f.link_to_add "Add an abstract", :sabstract, class: 'btn' %></p>
+<!--   <%= f.fields_for :authors do |authors_form| %>
+    <div class="field">
+      <%= authors_form.label "Author Name" %><br>
+      <%= authors_form.text_field :name %>
+    </div>
+    <div class="field">
+      <%= authors_form.label "Author Email" %><br>
+      <%= authors_form.text_field :email %>
+    </div>
+    <div class="field">
+      <%= authors_form.label "Author Affiliation" %><br>
+      <%= authors_form.text_field :affiliation %><br>
+    </div>
+    <div class="field">
+      <%= authors_form.label :'Athor Position' %><br>
+      <%= authors_form.number_field :position %><br>
+    </div>
+  <% end %> -->
+  <%= f.fields_for :authors do |authors_form| %>
+    <div class="field">
+      <%= authors_form.label "Author Name" %><br>
+      <%= authors_form.text_field :name %>
+    </div>
+    <div class="field">
+      <%= authors_form.label "Author Email" %><br>
+      <%= authors_form.text_field :email %>
+    </div>
+    <div class="field">
+      <%= authors_form.label "Author Affiliation" %><br>
+      <%= authors_form.text_field :affiliation %><br>
+    </div>
+    <div class="field">
+      <%= authors_form.label "Author Position" %><br>
+      <%= authors_form.number_field :position %><br>
+      <%= authors_form.link_to_remove "Remove this author", class: 'btn btn-red' %>
+    </div>
+  <% end %>
+  <p><%= f.link_to_add "Add an author", :authors, class: 'btn' %></p>
   <div class="field">
     <%= f.label :department_id %><br>
-    <%= f.number_field :department_id %>
+    <%= f.select :department_id, Department.all.collect {|dept| [dept.title, dept.id]} %>
   </div>
   <div class="field">
-    <%= f.label :sabstract_id %><br>
-    <%= f.number_field :sabstract_id %>
+    <%= f.label "PDF of Poster" %><br>
+    <%= f.file_field :pdf %>
   </div>
   <div class="actions">
     <%= f.submit %>

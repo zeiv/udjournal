@@ -35,6 +35,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 
 gem 'simple_form'
+gem 'nested_form'
 gem 'rspec-rails'
 gem 'prawn'
 gem 'paperclip'

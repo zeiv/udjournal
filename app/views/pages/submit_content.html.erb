@@ -1,0 +1,18 @@
+<h3>What type of content would you like to submit?</h3>
+
+
+<%= link_to( new_article_path, class: 'grid_6 submit_article' ) do %>
+	<%= content_tag :h2, "Article" %>
+<% end %>
+
+<%= link_to( new_sabstract_path, class: 'grid_6 submit_sabstract' ) do %>
+	<%= content_tag :h2, "Abstract" %>
+<% end %>
+
+<%= link_to( new_poster_path, class: 'grid_6 submit_poster' ) do %>
+	<%= content_tag :h2, "Poster" %>
+<% end %>
+
+<%= link_to( new_paper_path, class: 'grid_6 submit_paper' ) do %>
+	<%= content_tag :h2, "Paper" %>
+<% end %>

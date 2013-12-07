@@ -1,0 +1,14 @@
+@import 'colors';
+
+a.submit_article, a.submit_sabstract, a.submit_poster, a.submit_paper {
+	background: $gray_light;
+	margin-bottom: 20px;
+	text-align: center;
+	text-decoration: none;
+	&:hover {
+		background: $ud_cyan;
+	}
+	h2 {
+		color: white;
+	}
+}

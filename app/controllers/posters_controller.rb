@@ -1,4 +1,5 @@
 class PostersController < ApplicationController
+  filter_resource_access
   before_action :set_poster, only: [:show, :edit, :update, :destroy]
 
   # GET /posters
@@ -69,6 +70,7 @@ class PostersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def poster_params
-      params.require(:poster).permit(:user_id, :department_id, :sabstract_id)
+      # params.require(:poster).permit(:user_id, :department_id, :sabstract_id, :pdf, :sabstract, :authors, :featured, :published, sabstract_attributes: [:id, :name, :_destroy, :title, :content, :authors, :document_id, :document_type], authors_attributes: [:id, :name, :_destroy, :email, :affiliation, :position, :document_id, :document_type])
+      params.require(:poster).permit(:department_id, :pdf)
     end
 end

@@ -1,4 +1,5 @@
 class PapersController < ApplicationController
+  filter_resource_access
   before_action :set_paper, only: [:show, :edit, :update, :destroy]
 
   # GET /papers
@@ -69,6 +70,6 @@ class PapersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def paper_params
-      params.require(:paper).permit(:sabstract_id, :user_id, :department_id, :date_published)
+      params.require(:paper).permit(:sabstract_id, :user_id, :department_id, :date_published, :featured, :publishd, sabstract_attributes: [:id, :name, :_destroy, :title, :content, :authors], authors_attributes: [:id, :name, :_destroy, :email, :affiliation, :position])
     end
 end

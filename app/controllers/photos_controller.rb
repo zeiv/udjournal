@@ -1,11 +1,10 @@
 class PhotosController < ApplicationController
-  filter_access_to :all
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
 
 	def create
 		@photo = Photo.new( eval(params[:hint]) )
 		@photo.image = params[:file]
-		@photo.save
+		puts @photo.save
 
 		render json: {
 			image: {

@@ -2,6 +2,9 @@ authorization do
 	role :admin do
 		includes :editor
 		has_permission_on :articles, to: :manage
+		has_permission_on :papers, to: :manage
+		has_permission_on :posters, to: :manage
+		has_permission_on :sabstracts, to: :manage
 	end
 	role :editor do
 		includes :moderator
@@ -18,6 +21,9 @@ authorization do
 			if_attribute user_id: is {user.id}
 		end
 		has_permission_on :photos, to: :submit
+		has_permission_on :sabstracts, to: :submit
+		has_permission_on :papers, to: :submit
+		has_permission_on :posters, to: :submit
 	end
 	role :guest do
 		has_permission_on :articles, to: [:show, :index]

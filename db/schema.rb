@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131206215702) do
+ActiveRecord::Schema.define(version: 20131207020645) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20131206215702) do
     t.integer  "sabstract_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "position"
   end
 
   create_table "departments", force: true do |t|
@@ -65,6 +66,9 @@ ActiveRecord::Schema.define(version: 20131206215702) do
     t.string   "pdf_content_type"
     t.integer  "pdf_file_size"
     t.datetime "pdf_updated_at"
+    t.integer  "sabstract_id"
+    t.boolean  "featured"
+    t.boolean  "published"
   end
 
   create_table "peer_reviews", force: true do |t|
@@ -98,6 +102,9 @@ ActiveRecord::Schema.define(version: 20131206215702) do
     t.string   "pdf_content_type"
     t.integer  "pdf_file_size"
     t.datetime "pdf_updated_at"
+    t.integer  "sabstract_id"
+    t.boolean  "featured"
+    t.boolean  "published"
   end
 
   create_table "roles", force: true do |t|
@@ -120,6 +127,8 @@ ActiveRecord::Schema.define(version: 20131206215702) do
     t.integer  "document_id"
     t.string   "document_type"
     t.integer  "department_id"
+    t.boolean  "featured"
+    t.boolean  "published"
   end
 
   create_table "users", force: true do |t|

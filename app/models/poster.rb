@@ -7,6 +7,9 @@ class Poster < ActiveRecord::Base
 	has_many :peer_reviews, as: :document
 	has_many :authors, through: :sabstract
 
-	has_attached_file :pdf, styles: {full: "940x", half: "460x", third: "300x"}
-	validates_attachment :pdf, content_type: { content_type: "application/pdf" }
+	accepts_nested_attributes_for :sabstract
+	accepts_nested_attributes_for :authors
+
+	has_attached_file :pdf
+	validates_attachment :pdf, content_type: { content_type: ["application/pdf", "application/x-pdf"] }
 end

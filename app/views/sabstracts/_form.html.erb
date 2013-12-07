@@ -20,12 +20,8 @@
     <%= f.text_area :content %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :departmnent_id %><br>
-    <%= f.number_field :departmnent_id %>
+    <%= f.label :department_id %><br>
+    <%= f.select :department_id, Department.all.collect {|dept| [dept.title, dept.id]} %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -69,6 +69,6 @@ class SabstractsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sabstract_params
-      params.require(:sabstract).permit(:title, :content, :user_id, :departmnent_id)
+      params.require(:sabstract).permit(:title, :content, :user_id, :department_id, :featured, :published, authors_attributes: [:id, :name, :email, :affiliation, :position])
     end
 end
