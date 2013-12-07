@@ -12,3 +12,8 @@ a.submit_article, a.submit_sabstract, a.submit_poster, a.submit_paper {
 		color: white;
 	}
 }
+
+section.high_voltage > p, section.high_voltage > ul > li {
+	font-size: 14pt;
+	line-height: 140%;
+}

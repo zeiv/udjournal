@@ -21,24 +21,6 @@
     </div>
   <% end %>
   <p><%= f.link_to_add "Add an abstract", :sabstract, class: 'btn' %></p>
-<!--   <%= f.fields_for :authors do |authors_form| %>
-    <div class="field">
-      <%= authors_form.label "Author Name" %><br>
-      <%= authors_form.text_field :name %>
-    </div>
-    <div class="field">
-      <%= authors_form.label "Author Email" %><br>
-      <%= authors_form.text_field :email %>
-    </div>
-    <div class="field">
-      <%= authors_form.label "Author Affiliation" %><br>
-      <%= authors_form.text_field :affiliation %><br>
-    </div>
-    <div class="field">
-      <%= authors_form.label :'Athor Position' %><br>
-      <%= authors_form.number_field :position %><br>
-    </div>
-  <% end %> -->
   <%= f.fields_for :authors do |authors_form| %>
     <div class="field">
       <%= authors_form.label "Author Name" %><br>

@@ -14,7 +14,7 @@ class Article < ActiveRecord::Base
 	end
 
 	def self.last_published
-		where(published: true).last
+		where(published: true, featured: false).last
 	end
 
 	def featured!

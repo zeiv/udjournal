@@ -49,6 +49,7 @@ gem 'omniauth-openid'
 gem 'ruby-openid-apps-discovery'
 gem "ruby-openid"
 gem 'declarative_authorization'
+gem 'rails_admin'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

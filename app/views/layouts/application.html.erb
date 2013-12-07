@@ -15,12 +15,12 @@
 <nav>
 	<ul class='clearfix'>
 		<%= menu_button 'Home', root_path %>
-		<%= menu_button 'Subscriptions', '#' %>
+		<%= menu_button 'Subscriptions', page_path('subscriptions') %>
 		<%= menu_button 'Submit Content', page_path('submit_content') %>
-		<%= menu_button 'Archives', '#' %>
-		<%= menu_button 'About Epistolae', '#' %>
+		<%= menu_button 'Archives', page_path('archives') %>
+		<%= menu_button 'About UDJS', page_path('about') %>
 		<%= menu_button 'University of Dallas', 'http://www.udallas.edu' %>
-		<%= menu_button 'Contact Us', '#' %>
+		<%= menu_button 'Contact Us', page_path('contact') %>
 		<%= menu_button 'Sign In', sign_in_path unless signed_in? %>
 		<%= menu_button 'Sign Out', sign_out_path if signed_in? %>
 		<%= content_tag :li, content_tag(:input) %>
