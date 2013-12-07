@@ -1,5 +1,4 @@
 class ArticlesController < ApplicationController
-  filter_access_to :all
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   # GET /articles

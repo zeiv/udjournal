@@ -39,7 +39,7 @@ end
 
 privileges do
 	privilege :manage do
-		includes :edit, :update, :destroy
+		includes :edit, :update, :destroy, :delete
 	end
 	privilege :curate do
 		includes :publish, :feature, :update, :edit

@@ -1,5 +1,5 @@
 class PapersController < ApplicationController
-  filter_resource_access
+  # filter_resource_access
   before_action :set_paper, only: [:show, :edit, :update, :destroy]
 
   # GET /papers

@@ -1,4 +1,5 @@
 class SabstractsController < ApplicationController
+  # filter_resource_access
   before_action :set_sabstract, only: [:show, :edit, :update, :destroy]
 
   # GET /sabstracts

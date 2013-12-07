@@ -1,5 +1,5 @@
 class Paper < ActiveRecord::Base
-	using_access_control
+	# using_access_control
 
 	belongs_to :user
 	has_one :sabstract, as: :document
