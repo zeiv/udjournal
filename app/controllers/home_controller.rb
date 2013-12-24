@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
     @featured_post = Article.featured
-    @recent_post = Article.last_published
+    @recent_posts = Article.five_last_published
   end
 
   # def art
