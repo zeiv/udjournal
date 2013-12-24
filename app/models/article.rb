@@ -14,11 +14,11 @@ class Article < ActiveRecord::Base
 	end
 
 	def self.last_published
-		where(published: true, featured: false).first
+		where(published: true, featured: false).order('created_at DESC').first
 	end
 
 	def self.five_last_published
-		where(published: true, featured: false).first(5)
+		where(published: true, featured: false).order('created_at DESC').limit(5).all
 	end
 
 	def featured!
