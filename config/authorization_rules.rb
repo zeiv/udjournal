@@ -5,6 +5,8 @@ authorization do
 		has_permission_on :papers, to: :manage
 		has_permission_on :posters, to: :manage
 		has_permission_on :sabstracts, to: :manage
+		has_permission_on :rails_admin_history, to: [:list, :slider, :for_model, :for_object]
+		has_permission_on :rails_admin_main, to: [:dashboard, :index, :show, :new, :edit, :create, :update, :destroy, :list, :delete, :bulk_delete, :bulk_destroy, :get_pages, :show_history]
 	end
 	role :editor do
 		includes :moderator

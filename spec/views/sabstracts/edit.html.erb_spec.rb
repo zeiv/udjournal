@@ -18,7 +18,7 @@ describe "sabstracts/edit" do
       assert_select "input#sabstract_title[name=?]", "sabstract[title]"
       assert_select "textarea#sabstract_content[name=?]", "sabstract[content]"
       assert_select "input#sabstract_user_id[name=?]", "sabstract[user_id]"
-      assert_select "input#sabstract_departmnent_id[name=?]", "sabstract[departmnent_id]"
+      assert_select "select#sabstract_departmnent_id[name=?]", "sabstract[departmnent_id]"
     end
   end
 end

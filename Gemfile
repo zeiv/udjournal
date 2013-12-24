@@ -6,6 +6,7 @@ gem 'rails', '4.0.2'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
 	gem 'sqlite3'
+	gem 'factory_girl_rails'
 end
 
 # Use SCSS for stylesheets
@@ -44,6 +45,7 @@ gem 'tinymce-rails'
 gem 'tinymce-rails-imageupload', '~> 3.5.8'
 gem 'shoulda-matchers'
 gem 'high_voltage'
+gem 'factory_girl'
 gem 'omniauth'
 gem 'omniauth-openid'
 gem 'ruby-openid-apps-discovery'
