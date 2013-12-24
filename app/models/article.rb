@@ -17,6 +17,10 @@ class Article < ActiveRecord::Base
 		where(published: true, featured: false).last
 	end
 
+	def self.five_last_published
+		where(published: true, featured: false).last(5)
+	end
+
 	def featured!
 		if Article.featured
 			old_featured = Article.featured

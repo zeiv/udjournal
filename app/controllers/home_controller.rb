@@ -1,7 +1,9 @@
 class HomeController < ApplicationController
+  before_action :get_posts, only: [:biology, :chemistry, :economics, :mathematics, :physics, :psychology]
+
   def index
     @featured_post = Article.featured
-    @recent_post = Article.last_published
+    @recent_posts = Article.five_last_published
   end
 
   # def art
@@ -50,8 +52,6 @@ class HomeController < ApplicationController
   # end
 
   def physics
-    @recent_post = Article.where(department_id: 5, published: true).last
-    @posts = Article.where(department_id: 5).reverse - [@recent_post]
   end
 
   # def politics
@@ -65,4 +65,9 @@ class HomeController < ApplicationController
 
   # def theology
   # end
+
+  def get_posts
+    @recent_post = Article.where(department_id: 5, published: true).last
+    @posts = Article.where(department_id: 5).reverse - [@recent_post]
+  end
 end
