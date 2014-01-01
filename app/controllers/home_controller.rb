@@ -12,12 +12,12 @@ class HomeController < ApplicationController
 
   def biology
     @recent_post = Article.where(department_id: 1, published: true).last
-    @posts = Article.where(department_id: 1).reverse - [@recent_post]
+    @posts = Article.where(department_id: 1, published: true).reverse - [@recent_post]
   end
 
   def chemistry
     @recent_post = Article.where(department_id: 2, published: true).last
-    @posts = Article.where(department_id: 2).reverse - [@recent_post]
+    @posts = Article.where(department_id: 2, published: true).reverse - [@recent_post]
   end
 
   # def computer_science
@@ -31,7 +31,7 @@ class HomeController < ApplicationController
 
   def economics
     @recent_post = Article.where(department_id: 3, published: true).last
-    @posts = Article.where(department_id: 3).reverse - [@recent_post]
+    @posts = Article.where(department_id: 3, published: true).reverse - [@recent_post]
   end
 
   # def education
@@ -48,7 +48,7 @@ class HomeController < ApplicationController
 
   def mathematics
     @recent_post = Article.where(department_id: 4, published: true).last
-    @posts = Article.where(department_id: 4).reverse - [@recent_post]
+    @posts = Article.where(department_id: 4, published: true).reverse - [@recent_post]
   end
 
   # def ministry
@@ -59,7 +59,7 @@ class HomeController < ApplicationController
 
   def physics
     @recent_post = Article.where(department_id: 5, published: true).last
-    @posts = Article.where(department_id: 5).reverse - [@recent_post]
+    @posts = Article.where(department_id: 5, published: true).reverse - [@recent_post]
   end
 
   # def politics
@@ -67,7 +67,7 @@ class HomeController < ApplicationController
 
   def psychology
     @recent_post = Article.where(department_id: 6, published: true).last
-    @posts = Article.where(department_id: 6).reverse - [@recent_post]
+    @posts = Article.where(department_id: 6, published: true).reverse - [@recent_post]
   end
 
   # def philosophy
