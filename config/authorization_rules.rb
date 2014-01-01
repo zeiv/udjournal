@@ -1,6 +1,6 @@
 authorization do
 	role :admin do
-		includes :editor
+		includes :staff
 		has_permission_on :articles, to: :manage
 		has_permission_on :papers, to: :manage
 		has_permission_on :posters, to: :manage
@@ -8,10 +8,16 @@ authorization do
 		has_permission_on :rails_admin_history, to: [:list, :slider, :for_model, :for_object]
 		has_permission_on :rails_admin_main, to: [:dashboard, :index, :show, :new, :edit, :create, :update, :destroy, :list, :delete, :bulk_delete, :bulk_destroy, :get_pages, :show_history]
 	end
-	role :editor do
-		includes :moderator
+	role :staff do
+		includes :editor
+		has_permission_on :articles, to: [:edit, :update]
+		has_permission_on :papers, to: [:edit, :update]
+		has_permission_on :posters, to: [:edit, :update]
+		has_permission_on :sabstracts, to: [:edit, :update]
+		has_permission_on :rails_admin_history, to: [:list, :slider, :for_model, :for_object]
+		has_permission_on :rails_admin_main, to: [:dashboard, :index, :show, :new, :edit, :create, :update, :destroy, :list, :get_pages, :show_history]
 	end
-	role :moderator do
+	role :editor do
 		includes :student
 		has_permission_on :articles, to: :curate
 	end
