@@ -1,2 +1,17 @@
-<h1>Home#biology</h1>
-<p>Find me in app/views/home/biology.html.erb</p>
+<h1>Biology</h1>
+
+<article id='recent' class='bio grid_12'>
+	<header>
+		<h1><%= link_to @recent_post.title, @recent_post if @recent_post %></h1>
+	</header>
+	<%= raw @recent_post.body.truncate(1600) if @recent_post %>
+</article>
+
+<% @posts.each do |post| %>
+	<article class='bio grid_6'>
+		<header>
+			<h1><%= link_to post.title, post %></h1>
+		</header>
+		<%= raw post.body.truncate(800) %>
+	</article>
+<% end %>

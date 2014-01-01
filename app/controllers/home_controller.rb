@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
     @featured_post = Article.featured
-    @recent_post = Article.last_published
+    @recent_posts = Article.five_last_published
   end
 
   # def art
@@ -11,9 +11,13 @@ class HomeController < ApplicationController
   # end
 
   def biology
+    @recent_post = Article.where(department_id: 1, published: true).last
+    @posts = Article.where(department_id: 1).reverse - [@recent_post]
   end
 
   def chemistry
+    @recent_post = Article.where(department_id: 2, published: true).last
+    @posts = Article.where(department_id: 2).reverse - [@recent_post]
   end
 
   # def computer_science
@@ -26,6 +30,8 @@ class HomeController < ApplicationController
   # end
 
   def economics
+    @recent_post = Article.where(department_id: 3, published: true).last
+    @posts = Article.where(department_id: 3).reverse - [@recent_post]
   end
 
   # def education
@@ -41,6 +47,8 @@ class HomeController < ApplicationController
   # end
 
   def mathematics
+    @recent_post = Article.where(department_id: 4, published: true).last
+    @posts = Article.where(department_id: 4).reverse - [@recent_post]
   end
 
   # def ministry
@@ -58,6 +66,8 @@ class HomeController < ApplicationController
   # end
 
   def psychology
+    @recent_post = Article.where(department_id: 6, published: true).last
+    @posts = Article.where(department_id: 6).reverse - [@recent_post]
   end
 
   # def philosophy

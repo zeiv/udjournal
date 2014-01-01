@@ -1,12 +1,13 @@
 require 'spec_helper'
 
-describe "posts/show" do
+describe "articles/show" do
   before(:each) do
-    @post = assign(:post, stub_model(Post,
+    @article = assign(:article, stub_model(Article,
       :title => "Title",
-      :body => "MyText",
+      :body => "<p>MyText</p>",
       :published => false,
-      :department_id => 1
+      :department_id => 1,
+      :user_id => 1
     ))
   end
 

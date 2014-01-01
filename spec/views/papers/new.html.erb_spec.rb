@@ -16,7 +16,7 @@ describe "papers/new" do
     assert_select "form[action=?][method=?]", papers_path, "post" do
       assert_select "input#paper_sabstract_id[name=?]", "paper[sabstract_id]"
       assert_select "input#paper_user_id[name=?]", "paper[user_id]"
-      assert_select "input#paper_department_id[name=?]", "paper[department_id]"
+      assert_select "select#paper_department_id[name=?]", "paper[department_id]"
     end
   end
 end
