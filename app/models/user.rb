@@ -16,6 +16,10 @@ class User < ActiveRecord::Base
 		(roles || []).map {|r| r.title.to_sym}
 	end
 
+	def admin?
+		role_symbols.include? :admin
+	end
+
 	private
 	def add_default_role
 		self.roles << Role.find_by_title('student')
