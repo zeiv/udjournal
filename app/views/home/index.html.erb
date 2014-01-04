@@ -25,7 +25,8 @@
 	</header>
 	<% Department.all.each do |dept| %>
 		<%= link_to( eval("#{dept.code}_path"), id: "#{dept.code}", class: 'grid_4' ) do %>
-			<%= content_tag :h2, dept.title %>
+			<%= image_tag "#{dept.code}_logo.png", height: 60 %>
+			<%= content_tag :h2, raw(dept.title.gsub('&', '&<br>')) %>
 		<% end %>
 	<% end %>
 </section>
