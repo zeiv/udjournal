@@ -67,7 +67,7 @@ body > header:first-of-type h3 {
 }
 
 body > nav:first-of-type {
-	background-color: $ud_blue;
+	background-color: $ud_blue_dark;
 	margin: 0;
 }
 
@@ -96,7 +96,7 @@ body > nav:first-of-type li a {
 }
 
 body > nav:first-of-type li a:hover {
-	background-color: $ud_blue_dark;
+	background-color: $ud_blue;
 }
 
 body > nav:first-of-type li:last-child {

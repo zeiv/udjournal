@@ -1,16 +1,23 @@
 // Place all colors in SCSS variables here.
 
-// Primary Color Palette
-// https://kuler.adobe.com/Epistolae-color-theme-2783495/
+// UD Color Palette
 $ud_cyan: #5CA8F2;
 $ud_cyan_dark: #2D80D2;
 $ud_blue: #5A64F2;
-$ud_blue_dark: #262A7D;
+$ud_blue_dark: #264B85;
 $ud_red: #E07772;
 $ud_red_dark: #BF4640;
 $ud_gray: #E7EDFF;
 
-$gray_light: #D0D0D0;
+// Kuler Color Palette
+// https://kuler.adobe.com/UDJS-color-theme-2783495/
+$kuler_primary: hsl(210, 100%, 18%);
+$kuler_primary_alt: hsl(210, 40%, 41%);
+$kuler_seconday: hsl(4, 77%, 36%);
+$kuler_seconday_alt: hsl(3, 59%, 54%);
+$kuler_tertiary: hsl(52, 100%, 65%);
+
+$gray_light: #C4C4C4;
 $gray: #AAAAAA;
 $gray_dark: #777777;
 
