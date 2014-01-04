@@ -24,7 +24,6 @@
 		<%= menu_button 'Contact Us', page_path('contact') %>
 		<%= menu_button 'Sign In', sign_in_path unless signed_in? %>
 		<%= menu_button 'Sign Out', sign_out_path if signed_in? %>
-		<%= content_tag :li, content_tag(:input) %>
 	</ul>
 </nav>
 

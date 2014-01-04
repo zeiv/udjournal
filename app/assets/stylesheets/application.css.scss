@@ -67,8 +67,9 @@ body > header:first-of-type h3 {
 }
 
 body > nav:first-of-type {
-	background-color: $ud_blue_dark;
+	background-color: $gray_darker;
 	margin: 0;
+	border-bottom: 5px solid $ud_blue;
 }
 
 body > nav:first-of-type ul {
@@ -82,17 +83,17 @@ body > nav:first-of-type li {
 	display: block;
 	position: relative;
 	float: left;
-	border-right: 1px solid $ud_gray;
 }
 
 body > nav:first-of-type li a {
 	display: block;
-	padding: 0.8em 1em 0.8em 1em;
-	font-size: 0.85em;
+	padding: 0.6em 1em 0.6em 1em;
+	font-size: 1em;
 	color: white;
 	text-decoration: none;
 	letter-spacing: 0px;
 	word-spacing: 3px;
+	font-weight: bold;
 }
 
 body > nav:first-of-type li a:hover {
@@ -100,24 +101,22 @@ body > nav:first-of-type li a:hover {
 }
 
 body > nav:first-of-type li:last-child {
-	border: none;
 	float: right;
-	width: 100px;
 }
 
-body > nav:first-of-type li:last-child input {
-	margin: 8px;
-	box-sizing: border-box;
-	float: right;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	width: 106px;
-	padding: 3px 3px 3px 3px;
-	position: relative;
-	display: block;
-	border: none;
-	background-color: $ud_gray;
-}
+// body > nav:first-of-type li:last-child input {
+// 	margin: 8px;
+// 	box-sizing: border-box;
+// 	float: right;
+// 	-moz-box-sizing: border-box;
+// 	-webkit-box-sizing: border-box;
+// 	width: 106px;
+// 	padding: 3px 3px 3px 3px;
+// 	position: relative;
+// 	display: block;
+// 	border: none;
+// 	background-color: $ud_gray;
+// }
 
 // --------------------------------
 // Buttons & Inputs
@@ -146,15 +145,21 @@ div.actions {
 
 input[type='submit'], .btn {
 	display: inline-block;
-	background-color: $ud_cyan;
+	background-color: $btn-primary;
 	border: none;
 	padding: 0.5em 1em 0.6em 1em;
 	color: white;
 	cursor: pointer;
+	border-radius: 4px;
+}
+
+.btn-sharp {
+	border-radius: 0;
 }
 
 input[type='submit']:hover, .btn:hover {
-	background-color: $ud_cyan_dark;
+	color: white;
+	background-color: $btn-primary-hover;
 }
 
 input[type='submit'].btn-red, .btn.btn-red {
@@ -163,4 +168,12 @@ input[type='submit'].btn-red, .btn.btn-red {
 
 input[type='submit'].btn-red:hover {
 	background-color: $ud_red_dark;
+}
+
+a {
+	color: black;
+}
+
+a:hover {
+	color: $gray_darker;
 }

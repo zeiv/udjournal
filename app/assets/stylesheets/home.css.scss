@@ -186,3 +186,45 @@ section#department_list {
 		background: $theo_button_hover;
 	}
 }
+
+header.dept_header {
+	margin-top: 18px;
+	height: 100px;
+}
+
+header.dept_header h1 {
+	float: right;
+	color: white;
+	font-size: 35px;
+	margin-right: 80px;
+}
+
+header.dept_header img {
+	float: left;
+	margin: 20px 80px 20px 80px;
+	height: 60px;
+}
+
+header.bio {
+	background-color: $bio_button_hover;
+}
+
+header.chem {
+	background-color: $chem_button_hover;
+}
+
+header.econ {
+	background-color: $econ_button_hover;
+}
+
+header.math {
+	background-color: $math_button_hover;
+}
+
+header.phys {
+	background-color: $phys_button_hover;
+}
+
+header.psy {
+	background-color: $psy_button_hover;
+}
