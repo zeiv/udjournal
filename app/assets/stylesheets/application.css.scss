@@ -26,26 +26,10 @@
 // .container_12 > [class^="col-"][class$="-12"] {
 // }
 
-div.flash-messages {
-	margin-top: 1em;
-	background-color: $ud_gray;
-}
-
-div.flash-messages p {
-	padding: 5px 20px 5px 20px;
-	margin: 0;
-}
-
 body > header:first-of-type {
 	text-align: left;
 	position: relative;
 	margin: 8px 0 8px 0;
-}
-
-body > header:first-of-type h1 {
-	font-size: 96px;
-	margin-bottom: 0;
-	font-family: "Times New Roman", serif;
 }
 
 body > header:first-of-type img {
@@ -58,6 +42,7 @@ body > header:first-of-type h2 {
 	font-size: 52px;
 	margin: 24px 0 0 0;
 	font-family: "Times New Roman", serif;
+	color: black;
 }
 
 body > header:first-of-type h3 {
@@ -144,6 +129,22 @@ body > footer:first-of-type {
 body > footer:first-of-type p {
 	margin-top: 11px;
 }
+
+// --------------------------------
+// Flashes and Alerts
+// --------------------------------
+
+.alert.flash-messages {
+	margin: 15px 0 15px 0;
+}
+
+// .flash_notice {
+// 	@extend .alert-info;
+// }
+
+// .flas_alert {
+// 	@extend .alert-warning;
+// }
 
 // --------------------------------
 // Buttons & Inputs

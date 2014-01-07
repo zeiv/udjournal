@@ -7,6 +7,10 @@ $border-radius-base: 2px;
 $border-radius-large: 4px;
 $border-radius-small: 1px;
 
+$font-size-base: 14px;
+$line-height-base: 1.5;
+
+$alert-padding: 8px;
 
 // --------------------------------
 // Bootstrap
@@ -44,13 +48,13 @@ $border-radius-small: 1px;
 // @import "bootstrap/badges";
 // @import "bootstrap/jumbotron";
 // @import "bootstrap/thumbnails";
-// @import "bootstrap/alerts";
+@import "bootstrap/alerts";
 // @import "bootstrap/progress-bars";
 // @import "bootstrap/media";
 // @import "bootstrap/list-group";
 // @import "bootstrap/panels";
 // @import "bootstrap/wells";
-// @import "bootstrap/close";
+@import "bootstrap/close";
 
 // Components w/ JavaScript
 // @import "bootstrap/modals";

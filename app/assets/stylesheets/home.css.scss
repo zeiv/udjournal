@@ -18,7 +18,8 @@ section#department_list a.grid_4 {
 }
 
 section#department_list a.grid_4#phys h2 {
-	margin: 25px 30px 25px 0;
+	margin: 35px 30px 35px 0;
+	font-weight: bold;
 }
 
 section#department_list a.grid_4:nth-child(3n + 2) {
@@ -38,11 +39,12 @@ section#department_list a.grid_4 img {
 
 section#department_list a.grid_4 h2 {
 	height: auto;
-	margin: 43px 30px 43px 0;
+	margin: 47.5px 30px 47.5px 0;
 	vertical-align: middle;
 	text-align: left;
 	color: white;
 	float: right;
+	font-weight: bold;
 }
 
 section#department_list {
@@ -196,7 +198,8 @@ header.dept_header h1 {
 	float: right;
 	color: white;
 	font-size: 35px;
-	margin-right: 80px;
+	margin: 31px 80px 31px 80px;
+	font-weight: bold;
 }
 
 header.dept_header img {
