@@ -24,6 +24,6 @@
     <%= f.select :department_id, Department.all.collect {|dept| [dept.title, dept.id]} %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create Abstract" %>
   </div>
 <% end %>
