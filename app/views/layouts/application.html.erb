@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Udjournal</title>
+  <title>UD Journal of Science</title>
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => false %>
   <%= csrf_meta_tags %>
 </head>
 <body class='container_12'>
 
-<header>
+<header class='clearfix'>
+	<%= image_tag "UDJS_Logo_1_Color_100px.png" %>
 	<h2>University of Dallas Journal of Science</h2>
 </header>
 
@@ -21,15 +23,27 @@
 		<%= menu_button 'About UDJS', page_path('about') %>
 		<%= menu_button 'University of Dallas', 'http://www.udallas.edu' %>
 		<%= menu_button 'Contact Us', page_path('contact') %>
-		<%= menu_button 'Sign In', sign_in_path unless signed_in? %>
-		<%= menu_button 'Sign Out', sign_out_path if signed_in? %>
-		<%= content_tag :li, content_tag(:input) %>
+		<%= menu_button 'Sign In', sign_in_path, class: 'pull-right' unless signed_in? %>
+		<% if signed_in? %>
+		<li class='pull-right' id="dropdownNav">
+			<a href='#' data-toggle='dropdown'><%= current_user.name %> <b class='caret'></b></a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownNav">
+				<li><%= link_to 'Admin Panel', rails_admin_path, role: 'menuitem' %></li>
+				<li class='divider'></li>
+				<li><%= link_to 'Sign Out', sign_out_path, role: 'menuitem' %></li>
+			</ul>
+		</li>
+		<% end %>
 	</ul>
 </nav>
 
 <%= render 'layouts/messages' unless flash.empty? %>
 
 <%= yield %>
+
+<footer>
+	<p>&copy; 2014 University of Dallas</p>
+</footer>
 
 </body>
 </html>

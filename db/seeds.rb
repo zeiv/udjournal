@@ -24,7 +24,7 @@ departments = [
 	# { title: 'Pastoral Ministry', code: 'past' },
 	{ title: 'Physics & Engineering', code: 'phys' },
 	# { title: 'Politics', code: 'pol' },
-	{ title: 'Psyschology', code: 'psy' }
+	{ title: 'Psychology', code: 'psy' }
 	# { title: 'Philosophy', code: 'phil' },
 	# { title: 'Theology', code: 'theo' }
 ]

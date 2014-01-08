@@ -10,12 +10,14 @@ class SessionsController < ApplicationController
   	if @authentication
   		flash[:notice] = "Welcome back #{@authentication.user.name}!"
   		@user = @authentication.user
+      redirect_to root_url
   	else
   		user = User.find_or_initialize_by_email name: auth_hash['info']['name'], email: auth_hash['info']['email']
   		user.authentications.build provider: auth_hash['provider'], uid: auth_hash['uid']
   		user.save
   		@user = user
   		flash[:notice] = "Hi #{user.name}!  Thanks for signing up."
+      redirect_to root_url
   	end
   	session[:user_id] = @user.id
   end

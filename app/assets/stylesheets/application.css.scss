@@ -12,46 +12,37 @@
  *= require_tree .
 */
 
+@import 'bootstrap-custom';
 @import 'colors';
 
 // --------------------------------
 // Header and Navbar
 // --------------------------------
 
-body {
-	background-color: #fefdfc;
-}
+// .container_12 > * {
+// 	max-width: 960px;
+// }
 
-.container_12 > * {
-	max-width: 960px;
-}
+// .container_12 > [class^="col-"][class$="-12"] {
+// }
 
-div.flash-messages {
-	margin-top: 1em;
-	background-color: $ud_gray;
-}
-
-div.flash-messages p {
-	padding: 5px 20px 5px 20px;
-	margin: 0;
-}
-
-body > header:first-of-type{
-	text-align: center;
+body > header:first-of-type {
+	text-align: left;
 	position: relative;
-	top: -2em;
+	margin: 8px 0 8px 0;
 }
 
-body > header:first-of-type h1 {
-	font-size: 96px;
-	margin-bottom: 0;
-	font-family: "Times New Roman", serif;
+body > header:first-of-type img {
+	float: left;
+	margin: 0 0 0 0;
 }
 
 body > header:first-of-type h2 {
-	font-size: 56px;
-	margin-bottom: 0;
+	float: right;
+	font-size: 52px;
+	margin: 24px 0 0 0;
 	font-family: "Times New Roman", serif;
+	color: black;
 }
 
 body > header:first-of-type h3 {
@@ -61,76 +52,125 @@ body > header:first-of-type h3 {
 }
 
 body > nav:first-of-type {
-	background-color: $ud_blue;
+	background-color: $gray_darker;
 	margin: 0;
+	border-bottom: 5px solid $ud_blue;
 }
 
-body > nav:first-of-type ul {
+body > nav:first-of-type > ul:first-of-type {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
 
-body > nav:first-of-type li {
+body > nav:first-of-type > ul:first-of-type > li {
 	margin: 0;
 	display: block;
 	position: relative;
 	float: left;
-	border-right: 1px solid $ud_gray;
 }
 
-body > nav:first-of-type li a {
+body > nav:first-of-type > ul:first-of-type > li > a {
 	display: block;
-	padding: 0.8em 1em 0.8em 1em;
-	font-size: 0.85em;
+	padding: 0.6em 1em 0.6em 1em;
+	font-size: 1em;
 	color: white;
 	text-decoration: none;
 	letter-spacing: 0px;
-	word-spacing: 3px;
+	word-spacing: 1px;
 }
 
-body > nav:first-of-type li a:hover {
-	background-color: $ud_blue_dark;
+body > nav:first-of-type > ul:first-of-type > li > a:hover {
+	background-color: $ud_blue;
 }
 
-body > nav:first-of-type li:last-child {
-	border: none;
+body > nav:first-of-type > ul:first-of-type > li:last-child {
 	float: right;
-	width: 100px;
 }
 
-body > nav:first-of-type li:last-child input {
-	margin: 8px;
-	box-sizing: border-box;
-	float: right;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	width: 106px;
-	padding: 3px 3px 3px 3px;
-	position: relative;
-	display: block;
-	border: none;
-	background-color: $ud_gray;
+body > nav:first-of-type > ul:first-of-type > li.nav-dropdown > a {
+	padding: 0.7em 0.7em 0.5em 0.7em;
 }
+
+// body > nav:first-of-type li:last-child input {
+// 	margin: 8px;
+// 	box-sizing: border-box;
+// 	float: right;
+// 	-moz-box-sizing: border-box;
+// 	-webkit-box-sizing: border-box;
+// 	width: 106px;
+// 	padding: 3px 3px 3px 3px;
+// 	position: relative;
+// 	display: block;
+// 	border: none;
+// 	background-color: $ud_gray;
+// }
+
+// --------------------------------
+// Footer
+// --------------------------------
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 40px !important; //important in order to override Bootstrap
+}
+
+body > footer:first-of-type {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    background-color: $gray_lighter;
+    color: $gray_dark;
+}
+
+body > footer:first-of-type p {
+	margin-top: 11px;
+}
+
+// --------------------------------
+// Flashes and Alerts
+// --------------------------------
+
+.alert.flash-messages {
+	margin: 15px 0 15px 0;
+}
+
+// .flash_notice {
+// 	@extend .alert-info;
+// }
+
+// .flas_alert {
+// 	@extend .alert-warning;
+// }
 
 // --------------------------------
 // Buttons & Inputs
 // --------------------------------
 
-.btn {
-	display: inline-block;
-	text-decoration: none;
-	text-align: center;
-}
+// Also, see Bootstrap and its variables.
 
-input, textarea, input[type='checkbox'] {
-	border: 1px solid lightgray;
-	background-color: $ud_gray;
-	padding: 0.5em 1em 0.6em 1em;
+.btn {
+	border: none !important; //important to override Bootstrap
+	@extend .btn-primary;
+	&:hover {
+		border: none;
+		color: white !important;
+	}
+	&:active {
+		border: none;
+		color: white !important;
+	}
 }
 
 .tinymce {
-	width: 914px;
+	width: 100%;
 	height: 400px;
 }
 
@@ -138,23 +178,18 @@ div.actions {
 	margin-top: 10px;
 }
 
-input[type='submit'], .btn {
-	display: inline-block;
-	background-color: $ud_cyan;
-	border: none;
-	padding: 0.5em 1em 0.6em 1em;
-	color: white;
-	cursor: pointer;
+.btn-sharp {
+	border-radius: 0;
 }
 
-input[type='submit']:hover, .btn:hover {
-	background-color: $ud_cyan_dark;
+form input[type="submit"] {
+	@extend .btn;
 }
 
-input[type='submit'].btn-red, .btn.btn-red {
-	background-color: $ud_red;
+form input[type="text"] {
+	@extend .form-control;
 }
 
-input[type='submit'].btn-red:hover {
-	background-color: $ud_red_dark;
-}
+// --------------------------------
+// Helpers
+// --------------------------------

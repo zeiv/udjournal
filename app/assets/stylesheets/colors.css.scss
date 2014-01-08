@@ -1,18 +1,31 @@
 // Place all colors in SCSS variables here.
 
-// Primary Color Palette
-// https://kuler.adobe.com/Epistolae-color-theme-2783495/
+// UD Color Palette
 $ud_cyan: #5CA8F2;
 $ud_cyan_dark: #2D80D2;
 $ud_blue: #5A64F2;
-$ud_blue_dark: #262A7D;
+$ud_blue_dark: #264B85;
 $ud_red: #E07772;
 $ud_red_dark: #BF4640;
 $ud_gray: #E7EDFF;
 
-$gray_light: #D0D0D0;
+// Kuler Color Palette
+// https://kuler.adobe.com/UDJS-color-theme-2783495/
+$kuler_primary: hsl(210, 100%, 18%);
+$kuler_primary_alt: hsl(210, 40%, 41%);
+$kuler_secondary: hsl(4, 77%, 36%);
+$kuler_secondary_alt: hsl(3, 59%, 54%);
+$kuler_tertiary: hsl(52, 100%, 65%);
+
+$gray_lighter: #EEEEEE;
+$gray_light: #C4C4C4;
 $gray: #AAAAAA;
 $gray_dark: #777777;
+$gray_darker: #4F4F4F;
+$gray_darkest: #333333;
+
+$btn-primary: #58A0FC;
+$btn-primary-hover: #2D70D2;
 
 
 // Department Colors
@@ -61,8 +74,8 @@ $modl_button_hover: hsl(50, 50%, 50%);
 $past_button: hsl(284, 60%, 70%);
 $past_button_hover: hsl(284, 60%, 60%);
 
-$phys_button: hsl(0, 68%, 70%);
-$phys_button_hover: hsl(0, 68%, 60%);
+$phys_button: hsl(0, 64%, 66%);
+$phys_button_hover: hsl(0, 64%, 56%);
 
 $pol_button: hsl(205,65%, 60%);
 $pol_button_hover: hsl(205, 65%, 50%);

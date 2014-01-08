@@ -14,4 +14,8 @@
 //= require jquery_ujs
 //= require jquery_nested_form
 //= require tinymce-jquery
+//= require bootstrap/alert
+//= require bootstrap/button
+//= require bootstrap/carousel
+//= require bootstrap/dropdown
 //= require_tree .

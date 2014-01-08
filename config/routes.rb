@@ -1,4 +1,5 @@
 Udjournal::Application.routes.draw do
+  
   mount RailsAdmin::Engine => '/rails_admin', :as => 'rails_admin'
   resources :photos
   post 'tinymce_assets', to: 'photos#create', as: :upload_photo

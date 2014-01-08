@@ -5,6 +5,7 @@
 		</header>
 		<%= raw @featured_post.body.truncate(1600) if @featured_post %>
 	</article>
+	<h1 class='title grid_12'>Recent Submissions</h1>
 	<article id='recent' class='grid_6'>
 		<header>
 			<h1><%= link_to @recent_posts[0].title, @recent_posts[0] if @recent_posts[0] %></h1>
@@ -21,11 +22,12 @@
 
 <section id='department_list' class='grid_12'>
 	<header>
-		<h1>Departments</h1>
+		<h1 class='title'>Departments</h1>
 	</header>
 	<% Department.all.each do |dept| %>
 		<%= link_to( eval("#{dept.code}_path"), id: "#{dept.code}", class: 'grid_4' ) do %>
-			<%= content_tag :h2, dept.title %>
+			<%= image_tag "#{dept.code}_logo.png", height: 60 %>
+			<%= content_tag :h2, raw(dept.title.gsub('&', '&<br>')) %>
 		<% end %>
 	<% end %>
 </section>
