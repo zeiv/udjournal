@@ -51,7 +51,7 @@ gem 'omniauth'
 gem 'omniauth-openid'
 gem 'ruby-openid-apps-discovery'
 gem "ruby-openid"
-gem 'declarative_authorization'
+gem 'declarative_authorization', git: 'https://github.com/zeiv/declarative_authorization'
 gem 'rails_admin'
 
 group :doc do

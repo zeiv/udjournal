@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/zeiv/declarative_authorization
+  revision: 959ebd08dfc9e071bf909d8037973f5d3f5a410e
+  specs:
+    declarative_authorization (0.5.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -48,7 +54,6 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     daemons (1.1.9)
-    declarative_authorization (0.5.7)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     eventmachine (1.0.3)
@@ -225,7 +230,7 @@ DEPENDENCIES
   aws-sdk
   bootstrap-sass
   coffee-rails (~> 4.0.0)
-  declarative_authorization
+  declarative_authorization!
   factory_girl
   factory_girl_rails
   high_voltage
