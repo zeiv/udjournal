@@ -1,6 +1,5 @@
-GIT
-  remote: https://github.com/zeiv/declarative_authorization
-  revision: 959ebd08dfc9e071bf909d8037973f5d3f5a410e
+PATH
+  remote: ~/Dev/declarative_authorization
   specs:
     declarative_authorization (0.5.7)
 
