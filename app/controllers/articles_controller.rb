@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    render json: JSON.pretty_generate(JSON.parse(@article.to_json))
   end
 
   # GET /articles/new
