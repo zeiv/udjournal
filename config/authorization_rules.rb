@@ -20,6 +20,8 @@ authorization do
 	role :editor do
 		includes :student
 		has_permission_on :articles, to: :curate
+		has_permission_on :rails_admin_history, to: [:list, :slider, :for_model, :for_object]
+		has_permission_on :rails_admin_main, to: [:dashboard, :index, :show, :new, :edit, :create, :update, :destroy, :list, :get_pages, :show_history]
 	end
 	role :student do
 		includes :guest
